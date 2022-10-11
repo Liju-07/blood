@@ -9,9 +9,14 @@ import { AddDonorComponent } from './add-donor/add-donor.component';
 import { SearchDonorComponent } from './search-donor/search-donor.component';
 import { DeleteDonorComponent } from './delete-donor/delete-donor.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ViewallComponent } from './viewall/viewall.component';
+import { HttpClientModule} from '@angular/common/http';
 
 
 const appRoute:Routes=[
+  {
+    path:"",component:BloodComponent
+  },
   {
     path:"blood",component:BloodComponent
   },
@@ -23,6 +28,9 @@ const appRoute:Routes=[
   },
   {
     path:"adddonor",component:AddDonorComponent
+  },
+  {
+    path:"view",component:ViewallComponent
   }
 ]
 
@@ -33,12 +41,15 @@ const appRoute:Routes=[
     NavbarComponent,
     AddDonorComponent,
     SearchDonorComponent,
-    DeleteDonorComponent
+    DeleteDonorComponent,
+    ViewallComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
