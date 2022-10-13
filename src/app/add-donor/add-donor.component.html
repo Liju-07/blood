@@ -3,9 +3,9 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
             <label for="" class="label-form">Name</label>
-            <input type="text" class="form-control">
+            <input name="name" type="text" class="form-control" [(ngModel)]="name">
             <label for="" class="label-form">Blood Group</label>
-            <select name="" id="" class="form-control">
+            <select name="blood" id="" class="form-control" [(ngModel)]="blood">
                 <option value="O+">O+</option>
                 <option value="A-">A-</option>
                 <option value="A+">A+</option>
@@ -16,22 +16,22 @@
                 <option value="AB+">AB-</option>
             </select>
             <label for="" class="label-form">Last Donate Date</label>
-            <input type="date" class="form-control">
+            <input  name="donatDate" type="date" class="form-control" [(ngModel)]="donatDate">
             <label for="" class="label-form">DOB</label>
-            <input type="date" class="form-control">
+            <input  name="dob" type="date" class="form-control" [(ngModel)]="dob">
             <label for="" class="label-form">Any Disease</label>
-            <input type="text" class="form-control">
+            <input  name="Disease" type="text" class="form-control" [(ngModel)]="Disease">
          
             <label for="" class="label-form">Address</label>
-            <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+            <textarea name="Address" id="" cols="30" rows="10" class="form-control" [(ngModel)]="Address"></textarea>
             <label for="" class="label-form">Pin NO</label>
-            <input type="text" class="form-control">
+            <input  name="Pin" type="text" class="form-control" [(ngModel)]="Pin">
             <label for="" class="label-form"> Mobile No</label>
-            <input type="text" class="form-control">
+            <input  name="Mobile" type="text" class="form-control" [(ngModel)]="Mobile">
             <label for="" class="label-form">Email</label>
-            <input type="email" class="form-control">
+            <input  name="Email" type="email" class="form-control" [(ngModel)]="Email">
            
-            <button class="btn btn-primary">Submit</button>
+            <button class="btn btn-primary" (click)="read()">Submit</button>
         </div>
     </div>
 </div>
